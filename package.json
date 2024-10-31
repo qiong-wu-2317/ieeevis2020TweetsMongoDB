@@ -1,0 +1,21 @@
+{
+  "name": "ieeevis2020tweetsmongodb",
+  "version": "1.0.0",
+  "description": "Assignment 5 use MongoDB",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Qiong Wu",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "pettier": "^1.1.0"
+  },
+  "dependencies": {
+    "mongodb": "^6.10.0"
+  }
+}
