@@ -9,11 +9,15 @@ async function run(){
         const tweetCollection = db.collection("tweet");
 
         const aggre = [
+            {$sort: {
+                _id: -1 // order by time
+              }
+            },
             {
               $group: {
                 _id: "$user.id",  //group by user id
                 screen_name: { $first: "$user.screen_name" }, 
-                followers_count: { $first: "$user.followers_count" }
+                followers_count: { $first: "$user.followers_count" } // find most recent followers count
               }
             },
             {
