@@ -22,11 +22,7 @@ async function run(){
                 $addFields: { _id: "$id" } // add id
             },
             {
-                $merge: {
-                  into: "user",      
-                  whenMatched: "keepExisting",    
-                  whenNotMatched: "insert"       
-                }
+                $out: "user"
             }
           ]
         
@@ -48,11 +44,7 @@ async function run(){
               }
             },
             {
-              $merge: {
-                into: "Tweets_Only",  
-                whenMatched: "keepExisting",   
-                whenNotMatched: "insert"   
-              }
+              $out: "Tweets_Only"
             }
           ]
 
